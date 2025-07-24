@@ -12,7 +12,8 @@ const server = http.createServer(app);
 // });
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "https://chatty-frontend-xi.vercel.app/api"],
+    origin: ["http://localhost:5173", "https://chatty-frontend-xi.vercel.app"],
+     methods: ["GET", "POST"],
     credentials: true, // ✅ Allow credentials (very important!)
   },
 });
