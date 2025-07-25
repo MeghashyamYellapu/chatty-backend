@@ -13,7 +13,7 @@ import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
 app.use(express.json());
@@ -38,6 +38,8 @@ app.use("/api/messages", messageRoutes);
 //     res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
 //   });
 // }
+
+const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
   console.log("server is running on PORT:" + PORT);
